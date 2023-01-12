@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB397B8F29696BB60050C7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB397B8E29696BB60050C7C5 /* AppDelegate.swift */; };
+		FB397B9129696BB60050C7C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB397B9029696BB60050C7C5 /* SceneDelegate.swift */; };
+		FB397B9829696BB80050C7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB397B9729696BB80050C7C5 /* Assets.xcassets */; };
+		FB397B9B29696BB80050C7C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB397B9929696BB80050C7C5 /* LaunchScreen.storyboard */; };
+		FB397BA429696E670050C7C5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FB397BA329696E670050C7C5 /* RxCocoa */; };
+		FB397BA629696E670050C7C5 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FB397BA529696E670050C7C5 /* RxRelay */; };
+		FB397BA829696E670050C7C5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FB397BA729696E670050C7C5 /* RxSwift */; };
+		FB397BAC2969704E0050C7C5 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB397BAB2969704E0050C7C5 /* ProductService.swift */; };
+		FB397BAF296976EF0050C7C5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB397BAE296976EF0050C7C5 /* Product.swift */; };
+		FB397BB42969B98A0050C7C5 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB397BB32969B98A0050C7C5 /* ProductsViewModel.swift */; };
+		FB397BB6296A1D750050C7C5 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB397BB5296A1D750050C7C5 /* HTTPError.swift */; };
+		FB397BB8296A1DD70050C7C5 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB397BB7296A1DD70050C7C5 /* HTTPClient.swift */; };
+		FB397BBA296A1F100050C7C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB397BB9296A1F100050C7C5 /* Constants.swift */; };
+		FB397BBC296A20CE0050C7C5 /* EndpointURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB397BBB296A20CE0050C7C5 /* EndpointURL.swift */; };
+		FB397BBE296A23AB0050C7C5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB397BBD296A23AB0050C7C5 /* HTTPMethod.swift */; };
+		FB6AB40C296AD75A001EC2E5 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6AB40B296AD75A001EC2E5 /* HTTPRequest.swift */; };
+		FB6AB40E296AD8BE001EC2E5 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6AB40D296AD8BE001EC2E5 /* HTTPResponse.swift */; };
+		FB6AB412296AFDF0001EC2E5 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6AB411296AFDF0001EC2E5 /* Collection+Extension.swift */; };
+		FB6AB420296B0BB1001EC2E5 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6AB41F296B0BB1001EC2E5 /* ProductCell.swift */; };
+		FB6AB422296B0CC3001EC2E5 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6AB421296B0CC3001EC2E5 /* ProductsViewController.swift */; };
+		FBFB294B296F4CC000582740 /* ProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFB294A296F4CC000582740 /* ProductRequest.swift */; };
+		FBFB294D296FF24800582740 /* EndpointURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFB294C296FF24800582740 /* EndpointURLTests.swift */; };
+		FBFB294F296FF56B00582740 /* HTTPRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFB294E296FF56B00582740 /* HTTPRequestTests.swift */; };
+		FBFB2951296FFA3200582740 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFB2950296FFA3200582740 /* HTTPClientTests.swift */; };
+		FBFB29532970030600582740 /* ProductServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFB29522970030600582740 /* ProductServiceTests.swift */; };
+		FBFB29552970083700582740 /* sephora.json in Resources */ = {isa = PBXBuildFile; fileRef = FBFB29542970083700582740 /* sephora.json */; };
+		FBFB295729700D3900582740 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFB295629700D3900582740 /* Service.swift */; };
+		FBFB29582970122E00582740 /* sephora.json in Resources */ = {isa = PBXBuildFile; fileRef = FBFB29542970083700582740 /* sephora.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB6AB403296AB11B001EC2E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB397B8329696BB60050C7C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB397B8A29696BB60050C7C5;
+			remoteInfo = Sephora;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB397B8B29696BB60050C7C5 /* Sephora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sephora.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB397B8E29696BB60050C7C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB397B9029696BB60050C7C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FB397B9729696BB80050C7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB397B9A29696BB80050C7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB397B9C29696BB80050C7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB397BAB2969704E0050C7C5 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		FB397BAE296976EF0050C7C5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		FB397BB32969B98A0050C7C5 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		FB397BB5296A1D750050C7C5 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		FB397BB7296A1DD70050C7C5 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FB397BB9296A1F100050C7C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FB397BBB296A20CE0050C7C5 /* EndpointURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointURL.swift; sourceTree = "<group>"; };
+		FB397BBD296A23AB0050C7C5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FB6AB3FF296AB11B001EC2E5 /* SephoraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SephoraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB6AB40B296AD75A001EC2E5 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		FB6AB40D296AD8BE001EC2E5 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
+		FB6AB411296AFDF0001EC2E5 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		FB6AB41F296B0BB1001EC2E5 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		FB6AB421296B0CC3001EC2E5 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		FBFB294A296F4CC000582740 /* ProductRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRequest.swift; sourceTree = "<group>"; };
+		FBFB294C296FF24800582740 /* EndpointURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointURLTests.swift; sourceTree = "<group>"; };
+		FBFB294E296FF56B00582740 /* HTTPRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestTests.swift; sourceTree = "<group>"; };
+		FBFB2950296FFA3200582740 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
+		FBFB29522970030600582740 /* ProductServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceTests.swift; sourceTree = "<group>"; };
+		FBFB29542970083700582740 /* sephora.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sephora.json; sourceTree = "<group>"; };
+		FBFB295629700D3900582740 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB397B8829696BB60050C7C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB397BA829696E670050C7C5 /* RxSwift in Frameworks */,
+				FB397BA629696E670050C7C5 /* RxRelay in Frameworks */,
+				FB397BA429696E670050C7C5 /* RxCocoa in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6AB3FC296AB11B001EC2E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB397B8229696BB60050C7C5 = {
+			isa = PBXGroup;
+			children = (
+				FB397B8D29696BB60050C7C5 /* Sephora */,
+				FB6AB400296AB11B001EC2E5 /* SephoraTests */,
+				FB397B8C29696BB60050C7C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB397B8C29696BB60050C7C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB397B8B29696BB60050C7C5 /* Sephora.app */,
+				FB6AB3FF296AB11B001EC2E5 /* SephoraTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB397B8D29696BB60050C7C5 /* Sephora */ = {
+			isa = PBXGroup;
+			children = (
+				FB397B8E29696BB60050C7C5 /* AppDelegate.swift */,
+				FB397B9029696BB60050C7C5 /* SceneDelegate.swift */,
+				FB6AB410296AF7E8001EC2E5 /* Common */,
+				FB397BAD296976D90050C7C5 /* Models */,
+				FB397BAA296970180050C7C5 /* Networking */,
+				FB397BB22969B9740050C7C5 /* ViewModel */,
+				FB6AB414296B0776001EC2E5 /* Scenes */,
+				FB397B9729696BB80050C7C5 /* Assets.xcassets */,
+				FB397B9929696BB80050C7C5 /* LaunchScreen.storyboard */,
+				FB397B9C29696BB80050C7C5 /* Info.plist */,
+			);
+			path = Sephora;
+			sourceTree = "<group>";
+		};
+		FB397BAA296970180050C7C5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FB6AB40F296AD959001EC2E5 /* HTTP */,
+				FB6AB413296B00D1001EC2E5 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FB397BAD296976D90050C7C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB397BAE296976EF0050C7C5 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB397BB22969B9740050C7C5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FB397BB32969B98A0050C7C5 /* ProductsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FB6AB400296AB11B001EC2E5 /* SephoraTests */ = {
+			isa = PBXGroup;
+			children = (
+				FBFB29542970083700582740 /* sephora.json */,
+				FBFB294C296FF24800582740 /* EndpointURLTests.swift */,
+				FBFB294E296FF56B00582740 /* HTTPRequestTests.swift */,
+				FBFB2950296FFA3200582740 /* HTTPClientTests.swift */,
+				FBFB29522970030600582740 /* ProductServiceTests.swift */,
+			);
+			path = SephoraTests;
+			sourceTree = "<group>";
+		};
+		FB6AB40F296AD959001EC2E5 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				FB397BBB296A20CE0050C7C5 /* EndpointURL.swift */,
+				FB397BBD296A23AB0050C7C5 /* HTTPMethod.swift */,
+				FB6AB40B296AD75A001EC2E5 /* HTTPRequest.swift */,
+				FB6AB40D296AD8BE001EC2E5 /* HTTPResponse.swift */,
+				FB397BB5296A1D750050C7C5 /* HTTPError.swift */,
+				FB397BB7296A1DD70050C7C5 /* HTTPClient.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		FB6AB410296AF7E8001EC2E5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FB397BB9296A1F100050C7C5 /* Constants.swift */,
+				FB6AB411296AFDF0001EC2E5 /* Collection+Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FB6AB413296B00D1001EC2E5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FBFB295629700D3900582740 /* Service.swift */,
+				FBFB2949296F4CA900582740 /* Product */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FB6AB414296B0776001EC2E5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FB6AB41F296B0BB1001EC2E5 /* ProductCell.swift */,
+				FB6AB421296B0CC3001EC2E5 /* ProductsViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FBFB2949296F4CA900582740 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				FB397BAB2969704E0050C7C5 /* ProductService.swift */,
+				FBFB294A296F4CC000582740 /* ProductRequest.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB397B8A29696BB60050C7C5 /* Sephora */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB397B9F29696BB80050C7C5 /* Build configuration list for PBXNativeTarget "Sephora" */;
+			buildPhases = (
+				FB397B8729696BB60050C7C5 /* Sources */,
+				FB397B8829696BB60050C7C5 /* Frameworks */,
+				FB397B8929696BB60050C7C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sephora;
+			packageProductDependencies = (
+				FB397BA329696E670050C7C5 /* RxCocoa */,
+				FB397BA529696E670050C7C5 /* RxRelay */,
+				FB397BA729696E670050C7C5 /* RxSwift */,
+			);
+			productName = Sephora;
+			productReference = FB397B8B29696BB60050C7C5 /* Sephora.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB6AB3FE296AB11B001EC2E5 /* SephoraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB6AB407296AB11B001EC2E5 /* Build configuration list for PBXNativeTarget "SephoraTests" */;
+			buildPhases = (
+				FB6AB3FB296AB11B001EC2E5 /* Sources */,
+				FB6AB3FC296AB11B001EC2E5 /* Frameworks */,
+				FB6AB3FD296AB11B001EC2E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB6AB404296AB11B001EC2E5 /* PBXTargetDependency */,
+			);
+			name = SephoraTests;
+			productName = SephoraTests;
+			productReference = FB6AB3FF296AB11B001EC2E5 /* SephoraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB397B8329696BB60050C7C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					FB397B8A29696BB60050C7C5 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					FB6AB3FE296AB11B001EC2E5 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = FB397B8A29696BB60050C7C5;
+					};
+				};
+			};
+			buildConfigurationList = FB397B8629696BB60050C7C5 /* Build configuration list for PBXProject "Sephora" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB397B8229696BB60050C7C5;
+			packageReferences = (
+				FB397BA229696E670050C7C5 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			productRefGroup = FB397B8C29696BB60050C7C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB397B8A29696BB60050C7C5 /* Sephora */,
+				FB6AB3FE296AB11B001EC2E5 /* SephoraTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB397B8929696BB60050C7C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB397B9B29696BB80050C7C5 /* LaunchScreen.storyboard in Resources */,
+				FBFB29582970122E00582740 /* sephora.json in Resources */,
+				FB397B9829696BB80050C7C5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6AB3FD296AB11B001EC2E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBFB29552970083700582740 /* sephora.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB397B8729696BB60050C7C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB6AB412296AFDF0001EC2E5 /* Collection+Extension.swift in Sources */,
+				FB397BAC2969704E0050C7C5 /* ProductService.swift in Sources */,
+				FB397BBC296A20CE0050C7C5 /* EndpointURL.swift in Sources */,
+				FB397BBE296A23AB0050C7C5 /* HTTPMethod.swift in Sources */,
+				FB397BB42969B98A0050C7C5 /* ProductsViewModel.swift in Sources */,
+				FB6AB422296B0CC3001EC2E5 /* ProductsViewController.swift in Sources */,
+				FB397BAF296976EF0050C7C5 /* Product.swift in Sources */,
+				FB397B8F29696BB60050C7C5 /* AppDelegate.swift in Sources */,
+				FB397BBA296A1F100050C7C5 /* Constants.swift in Sources */,
+				FB397BB8296A1DD70050C7C5 /* HTTPClient.swift in Sources */,
+				FB6AB40C296AD75A001EC2E5 /* HTTPRequest.swift in Sources */,
+				FBFB295729700D3900582740 /* Service.swift in Sources */,
+				FB397BB6296A1D750050C7C5 /* HTTPError.swift in Sources */,
+				FB6AB420296B0BB1001EC2E5 /* ProductCell.swift in Sources */,
+				FB6AB40E296AD8BE001EC2E5 /* HTTPResponse.swift in Sources */,
+				FB397B9129696BB60050C7C5 /* SceneDelegate.swift in Sources */,
+				FBFB294B296F4CC000582740 /* ProductRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6AB3FB296AB11B001EC2E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBFB294D296FF24800582740 /* EndpointURLTests.swift in Sources */,
+				FBFB29532970030600582740 /* ProductServiceTests.swift in Sources */,
+				FBFB2951296FFA3200582740 /* HTTPClientTests.swift in Sources */,
+				FBFB294F296FF56B00582740 /* HTTPRequestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB6AB404296AB11B001EC2E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB397B8A29696BB60050C7C5 /* Sephora */;
+			targetProxy = FB6AB403296AB11B001EC2E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB397B9929696BB80050C7C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB397B9A29696BB80050C7C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB397B9D29696BB80050C7C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB397B9E29696BB80050C7C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB397BA029696BB80050C7C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VS3T4HZMCL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sephora/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bouchra.Sephora;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FB397BA129696BB80050C7C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VS3T4HZMCL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sephora/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bouchra.Sephora;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FB6AB405296AB11B001EC2E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VS3T4HZMCL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bouchra.SephoraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sephora.app/Sephora";
+			};
+			name = Debug;
+		};
+		FB6AB406296AB11B001EC2E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VS3T4HZMCL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bouchra.SephoraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sephora.app/Sephora";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB397B8629696BB60050C7C5 /* Build configuration list for PBXProject "Sephora" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB397B9D29696BB80050C7C5 /* Debug */,
+				FB397B9E29696BB80050C7C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB397B9F29696BB80050C7C5 /* Build configuration list for PBXNativeTarget "Sephora" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB397BA029696BB80050C7C5 /* Debug */,
+				FB397BA129696BB80050C7C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB6AB407296AB11B001EC2E5 /* Build configuration list for PBXNativeTarget "SephoraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB6AB405296AB11B001EC2E5 /* Debug */,
+				FB6AB406296AB11B001EC2E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB397BA229696E670050C7C5 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB397BA329696E670050C7C5 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB397BA229696E670050C7C5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		FB397BA529696E670050C7C5 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB397BA229696E670050C7C5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		FB397BA729696E670050C7C5 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB397BA229696E670050C7C5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FB397B8329696BB60050C7C5 /* Project object */;
+}
